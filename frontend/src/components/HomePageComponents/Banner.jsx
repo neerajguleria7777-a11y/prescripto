@@ -7,44 +7,79 @@ export default function Banner() {
     const navigate = useNavigate();
 
   return (
-    <div className='relative gradient-bg rounded-3xl px-6 sm:px-10 md:px-14 lg:px-12 my-20 md:mx-10 overflow-hidden shadow-2xl'>
-      
-      {/* Decorative elements */}
-      <div className='absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl'></div>
-      <div className='absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl'></div>
-
-      <div className='flex items-center relative z-10'>
-        {/* left  */}
-        <div className='flex-1 py-8 sm:py-10 md:py-16 lg:py-24 lg:pl-5'>
-              <div className='space-y-4'>
-                  <div className='inline-block'>
-                      <span className='bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm'>👨‍⚕️ 100+ Trusted Doctors</span>
-                  </div>
-                  <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight'>
-                      Book Appointment
-                  </h2>
-                  <p className='text-xl sm:text-2xl md:text-3xl text-white/90 font-medium'>
-                      With Expert Healthcare Professionals
-                  </p>
-                  <p className='text-white/80 text-sm sm:text-base max-w-md'>
-                      Get instant access to qualified doctors and schedule your appointments hassle-free
-                  </p>
-              </div>
-              <button 
-                  onClick={() => {navigate('/login'), scrollTo(0,0)}} 
-                  className='bg-white text-[#5f6FFF] text-sm sm:text-base font-semibold px-8 py-4 rounded-xl mt-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 group'
-              >
-                  Create Account 
-                  <span className='inline-block group-hover:translate-x-1 transition-transform duration-300'>→</span>
-              </button>
-        </div>
-
-        {/* right  */}
-        <div className='hidden md:block md:w-1/2 lg:w-[370px] relative'>
-              <img className='w-full absolute bottom-0 right-0 max-w-md hover:scale-105 transition-transform duration-500' src={assets.appointment_img} alt="" />
-        </div>
+    <div className='relative my-20 md:mx-10 overflow-hidden'>
+      {/* Gradient Background with Animation */}
+      <div className='absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 opacity-90'>
+        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v6h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] animate-pulse'></div>
       </div>
 
+      <div className='relative rounded-3xl shadow-2xl overflow-hidden'>
+        <div className='flex flex-col md:flex-row items-center'>
+          {/* Left Content */}
+          <div className='flex-1 py-12 md:py-16 lg:py-24 px-6 md:px-10 lg:px-16 relative z-10'>
+            <div className='space-y-6'>
+              {/* Badge */}
+              <div className='inline-block'>
+                <span className='px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold'>
+                  ⚡ Limited Time Offer
+                </span>
+              </div>
+
+              {/* Heading */}
+              <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight'>
+                Book Appointment
+                <span className='block text-yellow-300 mt-2'>With 100+ Trusted Doctors</span>
+              </h2>
+
+              {/* Description */}
+              <p className='text-white/90 text-base md:text-lg max-w-xl'>
+                Get instant access to qualified healthcare professionals. Schedule your consultation in just 60 seconds.
+              </p>
+
+              {/* Stats */}
+              <div className='flex flex-wrap gap-6 py-4'>
+                <div className='text-white'>
+                  <div className='text-3xl font-black'>100+</div>
+                  <div className='text-sm text-white/80'>Expert Doctors</div>
+                </div>
+                <div className='text-white'>
+                  <div className='text-3xl font-black'>50K+</div>
+                  <div className='text-sm text-white/80'>Happy Patients</div>
+                </div>
+                <div className='text-white'>
+                  <div className='text-3xl font-black'>4.9⭐</div>
+                  <div className='text-sm text-white/80'>Average Rating</div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <button 
+                onClick={() => {navigate('/login'), scrollTo(0,0)}} 
+                className='group bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3'
+              >
+                <span>Create Account Now</span>
+                <span className='group-hover:translate-x-2 transition-transform duration-300'>→</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className='hidden md:block md:w-1/2 lg:w-[450px] relative'>
+            <div className='relative h-full'>
+              {/* Decorative Elements */}
+              <div className='absolute top-10 right-10 w-32 h-32 bg-yellow-400/30 rounded-full blur-2xl animate-pulse'></div>
+              <div className='absolute bottom-10 left-10 w-32 h-32 bg-pink-400/30 rounded-full blur-2xl animate-pulse' style={{animationDelay: '1s'}}></div>
+              
+              {/* Image */}
+              <img 
+                className='relative z-10 w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500' 
+                src={assets.appointment_img} 
+                alt="Book Appointment" 
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

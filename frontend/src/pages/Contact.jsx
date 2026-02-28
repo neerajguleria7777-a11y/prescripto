@@ -21,8 +21,8 @@ const Contact = () => {
             </div>
             <h3 className='text-xl font-bold text-gray-800'>OUR OFFICE</h3>
           </div>
-          <p className='text-gray-600 leading-relaxed mb-2'>00000 Willms Station</p>
-          <p className='text-gray-600 leading-relaxed'>Suite 000, Washington, USA</p>
+          <p className='text-gray-600 leading-relaxed mb-2'>Kangra, Himachal Pradesh</p>
+          <p className='text-gray-600 leading-relaxed'>India</p>
         </div>
 
         <div className='bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-[#5f6FFF] card-hover'>
@@ -33,7 +33,7 @@ const Contact = () => {
             <h3 className='text-xl font-bold text-gray-800'>GET IN TOUCH</h3>
           </div>
           <p className='text-gray-600 leading-relaxed mb-2'>
-            <span className='font-semibold text-gray-700'>Tel:</span> (000) 000-0000
+            <span className='font-semibold text-gray-700'>Tel:</span> +91 8091043893
           </p>
           <p className='text-gray-600 leading-relaxed'>
             <span className='font-semibold text-gray-700'>Email:</span> prescripto@gmail.com

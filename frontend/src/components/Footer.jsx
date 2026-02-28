@@ -46,10 +46,13 @@ export default function Footer() {
              <p className='text-xl font-bold mb-5 text-gray-800'>GET IN TOUCH</p>
             <ul className='flex flex-col gap-3 text-gray-600'>
                 <li className='flex items-center gap-2 hover:text-[#5f6FFF] transition-colors duration-300'>
-                    <span>📞</span> +91 111-223-3245
+                    <span>📞</span> +91 8091043893
                 </li>
                 <li className='flex items-center gap-2 hover:text-[#5f6FFF] transition-colors duration-300'>
                     <span>✉️</span> prescripto@gmail.com
+                </li>
+                <li className='flex items-center gap-2 hover:text-[#5f6FFF] transition-colors duration-300'>
+                    <span>📍</span> Kangra, Himachal Pradesh
                 </li>
             </ul>
         </div>

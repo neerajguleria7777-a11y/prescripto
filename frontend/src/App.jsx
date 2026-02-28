@@ -10,6 +10,7 @@ import MyAppointments from './pages/MyAppointments'
 import Appointment from './pages/Appointment'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import PresAI from './components/PresAI'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/appointment/:docID' element={<Appointment />} />
       </Routes>
       <Footer />
+      <PresAI />
     </div>
   )
 }

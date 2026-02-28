@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+  --accent: #ec4899;
+  --success: #10b981;
+  --warning: #f59e0b;
+}
+
 * {
   font-family: Outfit;
 }
@@ -14,21 +23,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5f6FFF;
+  background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a5acc;
+  background: linear-gradient(180deg, #4f46e5 0%, #7c3aed 100%);
 }
 
 @media (max-width:740px) {
   .active p {
-    @apply text-white bg-[#5f6FFF]
+    @apply text-white bg-gradient-to-r from-[#6366f1] to-[#8b5cf6]
   }
 }
 
@@ -61,12 +70,12 @@ input[type=number]::-webkit-inner-spin-button {
 
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(95, 111, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3), 0 0 0 1px rgba(139, 92, 246, 0.1);
 }
 
 /* Button animations */
 .btn-primary {
-  @apply bg-[#5f6FFF] text-white px-8 py-3 rounded-full font-medium;
+  @apply bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white px-8 py-3 rounded-full font-medium;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -80,7 +89,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
 }
@@ -92,27 +101,37 @@ input[type=number]::-webkit-inner-spin-button {
 
 .btn-primary:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(95, 111, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.5);
 }
 
 /* Gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(135deg, #5f6FFF 0%, #7a88ff 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #5f6FFF 0%, #7a88ff 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
 }
 
 .btn-spinner .spinner {
   width: 100px;
   height: 100px;
   place-self: center;
-  border: 5px solid #bdbdbd;
-  border-top-color: #5f6FFF;
+  border: 5px solid #e2e8f0;
+  border-top-color: #6366f1;
   border-radius: 50%;
   animation: rotate 1.5s infinite;
 }
@@ -120,8 +139,8 @@ input[type=number]::-webkit-inner-spin-button {
 .btn-spinner2 .spinner {
   width: 100px;
   height: 100px;
-  border: 5px solid #bdbdbd;
-  border-top-color: #5f6FFF;
+  border: 5px solid #e2e8f0;
+  border-top-color: #6366f1;
   border-radius: 50%;
   animation: rotate 1.5s infinite;
 }
@@ -135,26 +154,23 @@ input[type=number]::-webkit-inner-spin-button {
 @keyframes pulseGlow {
   0% {
     box-shadow:
-      0 0 16px #5f6FFF,
-      0 0 32px #5f6FFF,
-      0 0 64px #5f6FFF,
-      0 0 96px #5f6FFF;
+      0 0 16px #6366f1,
+      0 0 32px #8b5cf6,
+      0 0 64px #ec4899;
   }
 
   50% {
     box-shadow:
-      0 0 24px #7a88ff,
-      0 0 48px #7a88ff,
-      0 0 96px #7a88ff,
-      0 0 128px #7a88ff;
+      0 0 24px #8b5cf6,
+      0 0 48px #ec4899,
+      0 0 96px #6366f1;
   }
 
   100% {
     box-shadow:
-      0 0 16px #5f6FFF,
-      0 0 32px #5f6FFF,
-      0 0 64px #5f6FFF,
-      0 0 96px #5f6FFF;
+      0 0 16px #6366f1,
+      0 0 32px #8b5cf6,
+      0 0 64px #ec4899;
   }
 }
 
@@ -172,17 +188,17 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .Toastify__toast--success {
-  background: linear-gradient(135deg, #5f6FFF 0%, #7a88ff 100%) !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
   color: white !important;
   font-weight: 500;
-  box-shadow: 0 8px 24px rgba(95, 111, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
 }
 
 .Toastify__toast--warning {
-  background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%) !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
   color: white !important;
   font-weight: 500;
-  box-shadow: 0 8px 24px rgba(255, 77, 79, 0.4);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
 }
 
 @keyframes fadeIn {
@@ -245,6 +261,13 @@ input[type=number]::-webkit-inner-spin-button {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 1000px 100%;
   animation: shimmer 2s infinite;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5),
+              0 0 40px rgba(139, 92, 246, 0.3),
+              0 0 60px rgba(236, 72, 153, 0.2);
 }
 
 @media (max-width: 768px) {
