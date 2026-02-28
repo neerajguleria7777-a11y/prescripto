@@ -28,10 +28,14 @@ export const securityMiddleware = (app) => {
     app.use(
         cors({
             origin: function (origin, callback) {
+                console.log('🔍 CORS Check - Origin:', origin);
+                console.log('✅ Allowed Origins:', allowedOrigins);
+                
                 if(!origin || allowedOrigins.includes(origin)){
                     callback(null, true);
                 }
                 else{
+                    console.log('❌ CORS Blocked:', origin);
                     callback(new Error('Not allowed by CORS'));
                 }
             },
