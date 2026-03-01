@@ -36,6 +36,12 @@ const Navbar = () => {
       </ul>
 
       <div className='flex items-center gap-4'>
+        <button 
+          onClick={() => window.open('http://localhost:5174', '_blank')} 
+          className='hidden md:block py-2 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300'
+        >
+          Admin Panel
+        </button>
         {
           user ?
             <div onClick={() => setOpenDropodown((prev) => !prev)} className='flex items-center gap-2 cursor-pointer group relative'>
@@ -68,6 +74,7 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to='/doctors' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>ALL DOCTORS</p> </NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/about' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>ABOUT</p> </NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/contact' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>CONTACT</p> </NavLink>
+            <button onClick={() => { window.open('http://localhost:5174', '_blank'); setShowMenu(false); }} className='w-full px-4 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-lg transition-all duration-300'>ADMIN PANEL</button>
           </ul>
         </div>
       </div>

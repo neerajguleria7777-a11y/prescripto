@@ -21,8 +21,13 @@ export const securityMiddleware = (app) => {
         })
     )
 
-    //frontend and admin
-    const allowedOrigins = [process.env.FRONTEND_URL, process.env.ADMIN_URL];
+    //frontend and admin - allow multiple origins
+    const allowedOrigins = [
+        process.env.FRONTEND_URL, 
+        process.env.ADMIN_URL,
+        'https://prescripto-frontend-gamma-coral.vercel.app',
+        'https://prescripto-2a9v.onrender.com'
+    ].filter(Boolean); // Remove undefined values
 
     // 2. CORS configuration for React app on 5173
     app.use(
