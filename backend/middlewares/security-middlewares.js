@@ -12,12 +12,12 @@ export const securityMiddleware = (app) => {
                 directives: {
                     defaultSrc: ["'self'"],
                     scriptSrc: ["'self'", "'unsafe-inline'"],
-                    connectSrc: ["'self'", "http://localhost:5173"], // React dev server
-                    imgSrc: ["'self'", "data:"],
+                    connectSrc: ["'self'", "http://localhost:5173"],
+                    imgSrc: ["'self'", "data:", "https:"],
                     styleSrc: ["'self'", "'unsafe-inline'"],
                 },
             },
-            crossOriginResourcePolicy: { policy: "same-origin" },
+            crossOriginResourcePolicy: { policy: "cross-origin" },
         })
     )
 

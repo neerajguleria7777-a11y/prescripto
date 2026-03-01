@@ -157,16 +157,16 @@ const authenticateUser = async (req, res, user) => {
 
     res.cookie('accessToken', accessToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
+        secure: true,
+        sameSite: 'None',
         maxAge: accessTokenAge,
         path: '/',
     });
 
     res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
+        secure: true,
+        sameSite: 'None',
         maxAge: refreshTokenAge,
         path: '/',
     }).status(200).json({
