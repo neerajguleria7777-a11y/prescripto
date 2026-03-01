@@ -11,8 +11,7 @@ const Navbar = () => {
   const { user, fetchLogout } = useContext(AppContext);
   const [openDropdown, setOpenDropodown] = useState(false);
   
-  const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174';
-  console.log('Admin URL:', adminUrl);
+  const adminUrl = 'https://prescripto-2njz.vercel.app';
 
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-200 backdrop-blur-sm sticky top-0 bg-white/80 z-50 shadow-sm' >
