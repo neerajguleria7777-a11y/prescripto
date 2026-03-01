@@ -26,7 +26,9 @@ export const securityMiddleware = (app) => {
         process.env.FRONTEND_URL, 
         process.env.ADMIN_URL,
         'https://prescripto-frontend-gamma-coral.vercel.app',
-        'https://prescripto-2a9v.onrender.com'
+        'https://prescripto-2a9v.onrender.com',
+        'https://prescripto-2njz.vercel.app',
+        'https://prescripto-abab.vercel.app'
     ].filter(Boolean); // Remove undefined values
 
     // 2. CORS configuration for React app on 5173
