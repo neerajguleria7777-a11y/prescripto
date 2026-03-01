@@ -77,6 +77,15 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to='/about' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>ABOUT</p> </NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/contact' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>CONTACT</p> </NavLink>
             <button onClick={() => { window.open(adminUrl, '_blank'); setShowMenu(false); }} className='w-full px-4 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-lg transition-all duration-300'>ADMIN PANEL</button>
+            {user ? (
+              <>
+                <NavLink onClick={() => setShowMenu(false)} to='/my-profile' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>MY PROFILE</p> </NavLink>
+                <NavLink onClick={() => setShowMenu(false)} to='/my-appointments' className='w-full'> <p className='px-4 py-3 rounded-lg hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-center'>MY APPOINTMENTS</p> </NavLink>
+                <button onClick={() => { fetchLogout(); setShowMenu(false); }} className='w-full px-4 py-3 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all duration-300'>LOGOUT</button>
+              </>
+            ) : (
+              <NavLink onClick={() => setShowMenu(false)} to='/login' className='w-full'> <p className='px-4 py-3 rounded-lg bg-gradient-to-r from-[#5f6FFF] to-[#7a88ff] text-white hover:shadow-lg transition-all duration-300 text-center'>LOGIN / SIGN UP</p> </NavLink>
+            )}
           </ul>
         </div>
       </div>
