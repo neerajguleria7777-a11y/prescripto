@@ -1,0 +1,54 @@
+<svg width="920" height="260" viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+  <defs>
+    <!-- Icon Gradient -->
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"></stop>
+      <stop offset="100%" stop-color="#10B981"></stop>
+    </linearGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1E40AF"></stop>
+      <stop offset="100%" stop-color="#16A34A"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- ICON -->
+  <g transform="translate(40,45)">
+
+    <!-- Document -->
+    <rect x="0" y="0" width="170" height="170" rx="32" fill="url(#iconGrad)"></rect>
+
+    <!-- Fold -->
+    <polygon points="120,0 170,0 170,50" fill="white" opacity="0.18"></polygon>
+
+    <!-- Speed Lines -->
+    <rect x="-45" y="55" width="70" height="12" rx="6" fill="#2563EB"></rect>
+    <rect x="-60" y="85" width="85" height="10" rx="5" fill="#2563EB"></rect>
+    <rect x="-40" y="115" width="60" height="8" rx="4" fill="#2563EB"></rect>
+
+    <!-- Medical Cross -->
+    <rect x="75" y="45" width="20" height="65" rx="4" fill="white"></rect>
+    <rect x="55" y="67" width="60" height="20" rx="4" fill="white"></rect>
+
+    <!-- Stethoscope Chestpiece -->
+    <circle cx="70" cy="145" r="20" fill="none" stroke="white" stroke-width="6"></circle>
+    <circle cx="70" cy="145" r="8" fill="white"></circle>
+
+    <!-- Stethoscope Tube -->
+    <path d="M70 125 
+             C70 175, 140 175, 140 120" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"></path>
+
+    <!-- Ear Tips -->
+    <circle cx="135" cy="110" r="8" fill="#22C55E"></circle>
+    <circle cx="155" cy="110" r="8" fill="#22C55E"></circle>
+
+  </g>
+
+  <!-- TEXT -->
+  <text x="270" y="155" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="92" font-weight="700" fill="url(#textGrad)">
+    fastDoc
+  </text>
+
+</svg>
