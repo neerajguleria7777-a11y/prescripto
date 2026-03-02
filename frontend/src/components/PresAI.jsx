@@ -78,9 +78,9 @@ const PresAI = () => {
     
     // Developer/Creator questions
     if (msg.includes('develop') || msg.includes('creator') || msg.includes('made') || msg.includes('built') || msg.includes('owner')) {
-      return '👨💻 Great question! I was developed by Neeraj, a talented Full-Stack Developer. He built this entire Prescripto platform using MERN stack to make healthcare more accessible. Pretty amazing, right? 😊\n\nIs there anything else you\'d like to know?'
+      return '👨💻 Great question! I (PresAI) was created by Neeraj, a talented Full-Stack Developer. He built this entire Prescripto platform AND me using MERN stack and AI to make healthcare more accessible. Pretty amazing, right? 😊\n\nIs there anything else you\'d like to know?'
     } else if (msg.includes('neeraj') || msg.includes('who is neeraj')) {
-      return '🌟 Neeraj is the brilliant mind behind Prescripto and me! He\'s passionate about using technology to improve healthcare. He created this platform to help people easily connect with doctors and manage their health. 💻\n\nWant to know more about our services?'
+      return '🌟 Neeraj is the brilliant mind behind Prescripto and me (PresAI)! He\'s passionate about using technology to improve healthcare. He created this platform to help people easily connect with doctors and manage their health. 💻\n\nWant to know more about our services?'
     }
     // Greetings - more natural
     else if (msg.includes('hi') || msg.includes('hello') || msg.includes('hey') || msg.includes('good morning') || msg.includes('good evening')) {
@@ -167,6 +167,70 @@ const PresAI = () => {
       return 'Mental health matters just as much as physical health! 🧠💚 Anxiety, depression, or sleep issues are real concerns.\n\n👨⚕️ Our doctors can provide support, counseling, and treatment options.\n\n📅 Would you like to talk to a professional? You\'re not alone in this!'
     } else if (msg.includes('who') || msg.includes('what are you') || msg.includes('api') || msg.includes('gpt') || msg.includes('create')) {
       return '👨💻 I was created by Neeraj! He built this entire Prescripto platform using MERN stack. I\'m PresAI, your AI health assistant here to help you book appointments and find doctors. 😊'
+    } else if (msg.includes('are you ai') || msg.includes('are you robot') || msg.includes('are you human') || msg.includes('are you real') || msg.includes('bot')) {
+      return '🤖 Yes, I\'m an AI assistant created by Neeraj! But I\'m specially trained to help with healthcare. I can understand your health concerns and connect you with real doctors 24/7.\n\nThink of me as your health buddy who never sleeps! 😊 How can I help you today?'
+    } else if (msg.includes('what can you do') || msg.includes('what you do') || msg.includes('your job') || msg.includes('capabilities') || msg.includes('features')) {
+      return '💪 Here\'s what I can do for you:\n\n✅ Understand your symptoms & suggest specialists\n✅ Book appointments instantly\n✅ Answer health questions 24/7\n✅ Find the right doctor for you\n✅ Provide health tips & advice\n✅ Help with lab tests & checkups\n✅ Manage your appointments\n\nI\'m basically your personal health assistant! What do you need help with?'
+    } else if (msg.includes('different') || msg.includes('special') || msg.includes('unique') || msg.includes('why you') || msg.includes('why prescripto')) {
+      return '🌟 What makes us different?\n\n✨ 100+ verified specialist doctors\n✨ Instant online consultations\n✨ 24/7 AI health assistant (that\'s me!)\n✨ Affordable & transparent pricing\n✨ Easy appointment booking\n✨ Lab tests & imaging services\n✨ Complete health records management\n\nWe make healthcare simple, accessible, and stress-free! Want to experience it?'
+    } else if (msg.includes('trust') || msg.includes('safe') || msg.includes('reliable') || msg.includes('genuine') || msg.includes('fake')) {
+      return '✅ Absolutely trustworthy! Here\'s why:\n\n🩺 All doctors are verified professionals\n🔒 Your data is completely secure\n⭐ Thousands of satisfied patients\n💯 Transparent pricing, no hidden costs\n📱 Easy to use platform\n\nYour health and privacy are our top priorities! Ready to book an appointment?'
+    } else if (msg.includes('better than') || msg.includes('compare') || msg.includes('vs') || msg.includes('other app')) {
+      return '🏆 We focus on what matters most:\n\n✓ Real verified doctors, not just listings\n✓ Instant AI assistance (me!) 24/7\n✓ Quick appointment booking\n✓ Affordable consultations\n✓ Complete healthcare services\n✓ User-friendly experience\n\nTry us once and see the difference! Want to book an appointment?'
+    } else if (msg.includes('understand') || msg.includes('smart') || msg.includes('intelligent') || msg.includes('learn')) {
+      return '🧠 I\'m trained to understand:\n\n✓ Your symptoms in simple language\n✓ Health concerns & questions\n✓ Casual conversation (I\'m friendly!)\n✓ Medical terms & conditions\n✓ Urgency levels\n\nJust talk to me naturally! I\'ll understand and help you. What\'s on your mind?'
+    } else if (msg.includes('language') || msg.includes('hindi') || msg.includes('english') || msg.includes('speak')) {
+      return '🗣️ I understand English and can help you in simple, easy-to-understand language!\n\nNo need for medical jargon - just tell me what\'s bothering you in your own words. I\'ll get it! 😊'
+    } else if (msg.includes('free') || msg.includes('charge') || msg.includes('payment') || msg.includes('pay')) {
+      return '💰 Talking to me is FREE! 😊\n\nDoctor consultations have affordable fees, and we accept:\n✓ Online payments\n✓ Insurance\n✓ Cash on delivery\n\nYour health is priceless, but our services are affordable! Want to know consultation fees?'
+    } else if (msg.includes('cancel') || msg.includes('reschedule') || msg.includes('change appointment')) {
+      return '📅 Yes! You can easily:\n\n✓ Cancel appointments\n✓ Reschedule to another time\n✓ Change doctors\n✓ View all your bookings\n\nFlexibility is important! Need help managing your appointments?'
+    } else if (msg.includes('prescription') || msg.includes('medicine list') || msg.includes('medical record')) {
+      return '📋 After consultation, you\'ll get:\n\n✓ Digital prescription\n✓ Medicine list\n✓ Test recommendations\n✓ Follow-up advice\n✓ Medical records saved\n\nEverything in one place! Want to book a consultation?'
+    } else if (msg.includes('bye') || msg.includes('goodbye') || msg.includes('see you') || msg.includes('later')) {
+      return 'Goodbye! 👋 Take care of your health! I\'m here 24/7 whenever you need me. Stay healthy! 😊'
+    } else if (msg.includes('ok') || msg.includes('okay') || msg.includes('hmm') || msg.includes('ohh') || msg.includes('i see')) {
+      return 'Got it! 😊 Is there anything else you\'d like to know? I\'m here to help with any health concerns or questions!'
+    } else if (msg.includes('maybe') || msg.includes('not sure') || msg.includes('thinking') || msg.includes('confused')) {
+      return 'No worries! Take your time. 😊 If you have any questions or need help deciding, I\'m right here. What\'s on your mind?'
+    } else if (msg.includes('later') || msg.includes('tomorrow') || msg.includes('next week')) {
+      return 'Sure! You can come back anytime. 😊 But remember, health issues shouldn\'t wait too long. I\'ll be here 24/7 when you\'re ready!'
+    } else if (msg.includes('sorry') || msg.includes('my bad') || msg.includes('mistake')) {
+      return 'No need to apologize! 😊 I\'m here to help, not judge. Feel free to ask anything. What can I do for you?'
+    } else if (msg.includes('wow') || msg.includes('cool') || msg.includes('nice') || msg.includes('impressive')) {
+      return 'Thank you! 😊 We try our best to make healthcare easy and accessible. Want to experience our services?'
+    } else if (msg.includes('lol') || msg.includes('haha') || msg.includes('😂') || msg.includes('😄')) {
+      return '😄 Glad I could make you smile! Laughter is good for health too! Now, is there anything health-related I can help you with?'
+    } else if (msg.includes('wait') || msg.includes('hold on') || msg.includes('one sec')) {
+      return 'Take your time! ⏰ I\'m not going anywhere. I\'ll be right here when you\'re ready. 😊'
+    } else if (msg.includes('really') || msg.includes('seriously') || msg.includes('for real')) {
+      return 'Yes, absolutely! 💯 Everything I say is genuine. We\'re here to help you with real healthcare solutions. Any questions?'
+    } else if (msg.includes('why') || msg.includes('how come') || msg.includes('reason')) {
+      return 'Good question! 🤔 I\'m here to provide answers. What specifically would you like to know about? Your health concern, our services, or something else?'
+    } else if (msg.includes('idk') || msg.includes('don\'t know') || msg.includes('no idea') || msg.includes('dunno')) {
+      return 'That\'s okay! 😊 That\'s exactly why I\'m here - to help you figure things out. Tell me what\'s bothering you, and I\'ll guide you!'
+    } else if (msg.includes('whatever') || msg.includes('anything') || msg.includes('something')) {
+      return 'Alright! 😊 How about we start with this: Are you feeling okay? Any health concerns? Or just want to know about our services?'
+    } else if (msg.includes('nah') || msg.includes('nope') || msg.includes('no thanks') || msg.includes('not now')) {
+      return 'No problem! 😊 I\'m here whenever you need me. Your health matters, so don\'t hesitate to reach out anytime. Take care! 👋'
+    } else if (msg.includes('yep') || msg.includes('yeah') || msg.includes('yup') || msg.includes('sure')) {
+      return 'Great! 😊 So what would you like help with? Tell me your health concern or what you need!'
+    } else if (msg.includes('please') || msg.includes('pls') || msg.includes('kindly')) {
+      return 'Of course! 😊 I\'m happy to help. What do you need assistance with?'
+    } else if (msg.includes('fast') || msg.includes('quick') || msg.includes('hurry') || msg.includes('asap')) {
+      return '⚡ I understand you need quick help! Tell me what\'s wrong, and I\'ll get you connected to a doctor ASAP. What\'s the issue?'
+    } else if (msg.includes('problem') || msg.includes('issue') || msg.includes('trouble') || msg.includes('wrong')) {
+      return 'I\'m here to help! 🤝 Tell me what\'s troubling you - whether it\'s a health issue or a question about our services. I\'ll sort it out!'
+    } else if (msg.includes('again') || msg.includes('repeat') || msg.includes('what') || msg.includes('huh')) {
+      return 'Let me explain again! 😊 I\'m PresAI, your health assistant. I help you book doctor appointments, answer health questions, and guide you to the right specialist. What do you need?'
+    } else if (msg.includes('mom') || msg.includes('dad') || msg.includes('mother') || msg.includes('father') || msg.includes('parents')) {
+      return '👨👩 Parents\' health is important! We have experienced doctors for all age-related health issues. Want to book an appointment for them?'
+    } else if (msg.includes('friend') || msg.includes('someone i know')) {
+      return '👥 You can book appointments for friends and family too! Just provide their details during booking. Want to help them get healthcare?'
+    } else if (msg.includes('pain killer') || msg.includes('painkiller') || msg.includes('medicine name')) {
+      return '⚠️ I can\'t prescribe medicines, but our doctors can! They\'ll prescribe the right medication after proper diagnosis. Want to consult a doctor?'
+    } else if (msg.includes('home remedy') || msg.includes('natural cure') || msg.includes('ayurvedic')) {
+      return '🌿 Home remedies can help, but for proper treatment, consulting a doctor is important! Our doctors can suggest both modern and natural treatments. Interested?'
     } else if (msg.includes('book') || msg.includes('appointment')) {
       return 'I\'d be happy to help you book an appointment! 📅\n\nHere\'s how it works:\n1️⃣ Browse our 100+ verified doctors\n2️⃣ Choose your preferred specialist\n3️⃣ Select a convenient time slot\n4️⃣ Confirm your booking\n\nWould you like to see our available doctors now?'
     } else if (msg.includes('doctor') || msg.includes('specialist')) {
