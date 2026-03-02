@@ -36,7 +36,7 @@ const Contact = () => {
             <span className='font-semibold text-gray-700'>Tel:</span> +91 8091043893
           </p>
           <p className='text-gray-600 leading-relaxed'>
-            <span className='font-semibold text-gray-700'>Email:</span> prescripto@gmail.com
+            <span className='font-semibold text-gray-700'>Email:</span> fastdoc@gmail.com
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const Contact = () => {
             <div className='w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-2xl'>
               💼
             </div>
-            <h3 className='text-xl font-bold text-gray-800'>CAREERS AT PRESCRIPTO</h3>
+            <h3 className='text-xl font-bold text-gray-800'>CAREERS AT FASTDOC</h3>
           </div>
           <p className='text-gray-700 leading-relaxed mb-6'>Learn more about our teams and job openings.</p>
           <button className='w-full md:w-auto gradient-bg text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300'>

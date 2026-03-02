@@ -5,7 +5,7 @@ const PresAI = () => {
   const [messages, setMessages] = useState([
     {
       type: 'bot',
-      text: 'Hi! I\'m PresAI 🤖, your AI health assistant. How can I help you today?',
+      text: 'Hi! I\'m FastAI 🤖, your AI health assistant for FastDoc. How can I help you today?',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ])
@@ -43,9 +43,9 @@ const PresAI = () => {
             body: JSON.stringify({
               contents: [{
                 parts: [{
-                  text: `You are PresAI, a friendly and empathetic AI health assistant for Prescripto healthcare platform. 
+                  text: `You are FastAI, a friendly and empathetic AI health assistant for FastDoc healthcare platform. 
                   
-                  About Prescripto:
+                  About FastDoc:
                   - 100+ verified specialist doctors
                   - Online consultations & appointment booking
                   - Specialties: General Physician, Pediatricians, Neurologists, Dermatologists, Gynecologists, Gastroenterologists
@@ -78,13 +78,13 @@ const PresAI = () => {
     
     // Developer/Creator questions
     if (msg.includes('develop') || msg.includes('creator') || msg.includes('made') || msg.includes('built') || msg.includes('owner')) {
-      return '👨💻 Great question! I (PresAI) was created by Neeraj, a talented Full-Stack Developer. He built this entire Prescripto platform AND me using MERN stack and AI to make healthcare more accessible. Pretty amazing, right? 😊\n\nIs there anything else you\'d like to know?'
+      return '👨💻 Great question! I (FastAI) was created by Neeraj, a talented Full-Stack Developer. He built this entire FastDoc platform AND me using MERN stack and AI to make healthcare more accessible. Pretty amazing, right? 😊\n\nIs there anything else you\'d like to know?'
     } else if (msg.includes('neeraj') || msg.includes('who is neeraj')) {
-      return '🌟 Neeraj is the brilliant mind behind Prescripto and me (PresAI)! He\'s passionate about using technology to improve healthcare. He created this platform to help people easily connect with doctors and manage their health. 💻\n\nWant to know more about our services?'
+      return '🌟 Neeraj is the brilliant mind behind FastDoc and me (FastAI)! He\'s passionate about using technology to improve healthcare. He created this platform to help people easily connect with doctors and manage their health. 💻\n\nWant to know more about our services?'
     }
     // Greetings - more natural
     else if (msg.includes('hi') || msg.includes('hello') || msg.includes('hey') || msg.includes('good morning') || msg.includes('good evening')) {
-      return 'Hello there! 👋 Great to see you! I\'m PresAI, your friendly AI health assistant. \n\nI\'m here to help you with:\n• Booking appointments\n• Finding the right doctor\n• Health advice\n• Managing your appointments\n\nWhat brings you here today? 😊'
+      return 'Hello there! 👋 Great to see you! I\'m FastAI, your friendly AI health assistant. \n\nI\'m here to help you with:\n• Booking appointments\n• Finding the right doctor\n• Health advice\n• Managing your appointments\n\nWhat brings you here today? 😊'
     }
     // Casual conversation
     else if (msg.includes('how are you') || msg.includes('how r u') || msg.includes('whats up') || msg.includes('wassup')) {
@@ -166,7 +166,7 @@ const PresAI = () => {
     } else if (msg.includes('anxiety') || msg.includes('depression') || msg.includes('stress') || msg.includes('mental') || msg.includes('panic') || msg.includes('insomnia') || msg.includes('sleep') || msg.includes('mood') || msg.includes('sad')) {
       return 'Mental health matters just as much as physical health! 🧠💚 Anxiety, depression, or sleep issues are real concerns.\n\n👨⚕️ Our doctors can provide support, counseling, and treatment options.\n\n📅 Would you like to talk to a professional? You\'re not alone in this!'
     } else if (msg.includes('who') || msg.includes('what are you') || msg.includes('api') || msg.includes('gpt') || msg.includes('create')) {
-      return '👨💻 I was created by Neeraj! He built this entire Prescripto platform using MERN stack. I\'m PresAI, your AI health assistant here to help you book appointments and find doctors. 😊'
+      return '👨💻 I\'m FastAI, created by Neeraj! He built this entire FastDoc platform using MERN stack and developed me as an AI health assistant to help you book appointments and find doctors. 😊\n\nI\'m here to make your healthcare journey easier!'
     } else if (msg.includes('are you ai') || msg.includes('are you robot') || msg.includes('are you human') || msg.includes('are you real') || msg.includes('bot')) {
       return '🤖 Yes, I\'m an AI assistant created by Neeraj! But I\'m specially trained to help with healthcare. I can understand your health concerns and connect you with real doctors 24/7.\n\nThink of me as your health buddy who never sleeps! 😊 How can I help you today?'
     } else if (msg.includes('what can you do') || msg.includes('what you do') || msg.includes('your job') || msg.includes('capabilities') || msg.includes('features')) {
@@ -222,7 +222,7 @@ const PresAI = () => {
     } else if (msg.includes('problem') || msg.includes('issue') || msg.includes('trouble') || msg.includes('wrong')) {
       return 'I\'m here to help! 🤝 Tell me what\'s troubling you - whether it\'s a health issue or a question about our services. I\'ll sort it out!'
     } else if (msg.includes('again') || msg.includes('repeat') || msg.includes('what') || msg.includes('huh')) {
-      return 'Let me explain again! 😊 I\'m PresAI, your health assistant. I help you book doctor appointments, answer health questions, and guide you to the right specialist. What do you need?'
+      return 'Let me explain again! 😊 I\'m FastAI, your health assistant. I help you book doctor appointments, answer health questions, and guide you to the right specialist. What do you need?'
     } else if (msg.includes('mom') || msg.includes('dad') || msg.includes('mother') || msg.includes('father') || msg.includes('parents')) {
       return '👨👩 Parents\' health is important! We have experienced doctors for all age-related health issues. Want to book an appointment for them?'
     } else if (msg.includes('friend') || msg.includes('someone i know')) {
@@ -231,6 +231,72 @@ const PresAI = () => {
       return '⚠️ I can\'t prescribe medicines, but our doctors can! They\'ll prescribe the right medication after proper diagnosis. Want to consult a doctor?'
     } else if (msg.includes('home remedy') || msg.includes('natural cure') || msg.includes('ayurvedic')) {
       return '🌿 Home remedies can help, but for proper treatment, consulting a doctor is important! Our doctors can suggest both modern and natural treatments. Interested?'
+    }
+    // Day 2: Respiratory diseases
+    else if (msg.includes('asthma') || msg.includes('breathing problem') || msg.includes('wheezing') || msg.includes('shortness of breath')) {
+      return '😮‍💨 Asthma and breathing problems need proper management! Our doctors can prescribe inhalers, medications, and breathing exercises.\n\n📅 Want to consult a respiratory specialist?'
+    } else if (msg.includes('bronchitis') || msg.includes('chest congestion') || msg.includes('phlegm') || msg.includes('mucus')) {
+      return '🫁 Bronchitis causes chest congestion and persistent cough. Our doctors can prescribe antibiotics if needed and suggest remedies.\n\n📅 Need a consultation?'
+    } else if (msg.includes('pneumonia') || msg.includes('lung infection') || msg.includes('chest pain breathing')) {
+      return '⚠️ Pneumonia is serious! Chest pain with breathing, high fever, and cough need immediate attention.\n\n📅 Please consult our doctor urgently!'
+    } else if (msg.includes('tuberculosis') || msg.includes('tb') || msg.includes('persistent cough') || msg.includes('night sweats')) {
+      return '🩺 TB symptoms include persistent cough, night sweats, and weight loss. Early detection is crucial!\n\n📅 Our doctors can order tests and start treatment. Book now?'
+    } else if (msg.includes('allergy') || msg.includes('allergic') || msg.includes('hay fever') || msg.includes('pollen')) {
+      return '🤧 Allergies can be managed! Whether it\'s pollen, dust, or food allergies, our doctors can prescribe antihistamines and identify triggers.\n\n📅 Want an allergy consultation?'
+    }
+    // Cardiovascular issues
+    else if (msg.includes('high bp') || msg.includes('hypertension') || msg.includes('blood pressure high')) {
+      return '💔 High blood pressure is a silent killer! Regular monitoring and medication are essential.\n\n📅 Our doctors can help manage your BP. Book a checkup?'
+    } else if (msg.includes('low bp') || msg.includes('hypotension') || msg.includes('blood pressure low') || msg.includes('dizziness standing')) {
+      return '😵 Low BP causes dizziness and fatigue. Our doctors can identify the cause and suggest treatment.\n\n📅 Need a consultation?'
+    } else if (msg.includes('cholesterol') || msg.includes('lipid') || msg.includes('triglycerides') || msg.includes('ldl') || msg.includes('hdl')) {
+      return '🧈 High cholesterol increases heart disease risk! Diet, exercise, and medication can control it.\n\n📅 Want to check your cholesterol levels?'
+    } else if (msg.includes('heart attack') || msg.includes('cardiac arrest') || msg.includes('chest tightness')) {
+      return '🚨 EMERGENCY! If you\'re having chest pain, tightness, or suspect heart attack, call ambulance immediately!\n\nFor heart health checkups, our doctors are available 24/7.'
+    } else if (msg.includes('irregular heartbeat') || msg.includes('palpitation') || msg.includes('arrhythmia') || msg.includes('heart racing')) {
+      return '💓 Irregular heartbeat needs evaluation! Our doctors can order ECG and prescribe medication if needed.\n\n📅 Book a cardiac consultation?'
+    } else if (msg.includes('varicose veins') || msg.includes('leg swelling') || msg.includes('edema')) {
+      return '🦵 Varicose veins and leg swelling can indicate circulation issues. Our doctors can suggest treatment options.\n\n📅 Want a consultation?'
+    }
+    // Bone and joint problems
+    else if (msg.includes('osteoporosis') || msg.includes('weak bones') || msg.includes('bone density')) {
+      return '🦴 Weak bones increase fracture risk! Calcium, vitamin D, and exercise help. Our doctors can order bone density tests.\n\n📅 Need a checkup?'
+    } else if (msg.includes('rheumatoid') || msg.includes('ra') || msg.includes('joint inflammation') || msg.includes('stiff joints')) {
+      return '🤕 Rheumatoid arthritis causes joint pain and stiffness. Early treatment prevents damage!\n\n📅 Our doctors can prescribe medications. Book now?'
+    } else if (msg.includes('gout') || msg.includes('uric acid') || msg.includes('toe pain')) {
+      return '🦶 Gout causes severe toe/joint pain due to high uric acid. Diet changes and medication help!\n\n📅 Want to consult a doctor?'
+    } else if (msg.includes('sciatica') || msg.includes('leg pain radiating') || msg.includes('lower back pain leg')) {
+      return '😣 Sciatica causes shooting pain from back to leg. Physiotherapy and medication provide relief!\n\n📅 Need treatment?'
+    } else if (msg.includes('slip disc') || msg.includes('herniated disc') || msg.includes('disc bulge')) {
+      return '💢 Slip disc causes severe back pain! Our doctors can suggest treatment - from medication to surgery if needed.\n\n📅 Book a consultation?'
+    } else if (msg.includes('frozen shoulder') || msg.includes('shoulder stiffness') || msg.includes('cant move shoulder')) {
+      return '🤷 Frozen shoulder limits movement! Physiotherapy and exercises help restore mobility.\n\n📅 Want treatment guidance?'
+    } else if (msg.includes('carpal tunnel') || msg.includes('wrist pain') || msg.includes('hand numbness') || msg.includes('tingling fingers')) {
+      return '✋ Carpal tunnel syndrome causes wrist pain and numbness. Common in computer users!\n\n📅 Our doctors can suggest exercises and treatment. Need help?'
+    }
+    // Infections
+    else if (msg.includes('malaria') || msg.includes('dengue') || msg.includes('chikungunya') || msg.includes('mosquito fever')) {
+      return '🦟 Mosquito-borne diseases need immediate attention! High fever, body ache, and weakness are warning signs.\n\n📅 Get tested and treated quickly. Book now?'
+    } else if (msg.includes('typhoid') || msg.includes('enteric fever') || msg.includes('prolonged fever')) {
+      return '🤒 Typhoid causes prolonged fever and weakness. Blood tests confirm it. Treatment is essential!\n\n📅 Need a consultation?'
+    } else if (msg.includes('jaundice') || msg.includes('yellow eyes') || msg.includes('yellow skin') || msg.includes('hepatitis')) {
+      return '🟡 Jaundice (yellow eyes/skin) indicates liver issues. Hepatitis or other causes need treatment!\n\n📅 Consult our doctor immediately?'
+    } else if (msg.includes('uti') || msg.includes('urinary infection') || msg.includes('burning urination') || msg.includes('frequent urination')) {
+      return '🚽 UTI causes burning and frequent urination. Antibiotics cure it quickly!\n\n📅 Don\'t ignore it - book a consultation?'
+    } else if (msg.includes('kidney stone') || msg.includes('renal calculi') || msg.includes('severe back pain') || msg.includes('blood in urine')) {
+      return '💎 Kidney stones cause severe pain! Our doctors can suggest treatment - from medication to procedures.\n\n📅 Need urgent help?'
+    } else if (msg.includes('appendicitis') || msg.includes('appendix pain') || msg.includes('right lower abdomen pain')) {
+      return '⚠️ Appendicitis causes severe right lower abdomen pain! This is an emergency - may need surgery.\n\n📅 Consult immediately!'
+    } else if (msg.includes('gallstone') || msg.includes('gallbladder') || msg.includes('right upper abdomen pain')) {
+      return '💚 Gallstones cause right upper abdomen pain after eating. Treatment ranges from diet to surgery.\n\n📅 Need evaluation?'
+    } else if (msg.includes('hernia') || msg.includes('bulge abdomen') || msg.includes('groin bulge')) {
+      return '🔴 Hernia causes a bulge in abdomen/groin. Surgery is often needed to fix it.\n\n📅 Want to consult a surgeon?'
+    } else if (msg.includes('piles') || msg.includes('hemorrhoids') || msg.includes('anal pain') || msg.includes('bleeding stool')) {
+      return '🩸 Piles/hemorrhoids cause pain and bleeding. Treatment available - from creams to procedures!\n\n📅 Don\'t be embarrassed - our doctors handle this daily. Book?'
+    } else if (msg.includes('fissure') || msg.includes('anal fissure') || msg.includes('pain passing stool')) {
+      return '😖 Anal fissure causes severe pain during bowel movements. Treatment helps healing!\n\n📅 Consult our doctor for relief?'
+    } else if (msg.includes('fistula') || msg.includes('anal fistula') || msg.includes('pus discharge')) {
+      return '⚕️ Fistula needs surgical treatment. Our doctors can evaluate and suggest the best approach.\n\n📅 Book a consultation?'
     } else if (msg.includes('book') || msg.includes('appointment')) {
       return 'I\'d be happy to help you book an appointment! 📅\n\nHere\'s how it works:\n1️⃣ Browse our 100+ verified doctors\n2️⃣ Choose your preferred specialist\n3️⃣ Select a convenient time slot\n4️⃣ Confirm your booking\n\nWould you like to see our available doctors now?'
     } else if (msg.includes('doctor') || msg.includes('specialist')) {
@@ -240,7 +306,7 @@ const PresAI = () => {
     } else if (msg.includes('tip') || msg.includes('health')) {
       return '💡 Here are some essential health tips:\n\n✅ Drink 8 glasses of water daily\n✅ Exercise for 30 minutes each day\n✅ Get 7-8 hours of quality sleep\n✅ Eat balanced, nutritious meals\n✅ Practice stress management\n✅ Regular health checkups\n\nWould you like personalized advice from our doctors? 😊'
     } else {
-      return 'Hey there! 👋 I\'m PresAI, your friendly AI health assistant!\n\nI can help you with:\n\n🏥 Book appointments with 100+ specialists\n👨⚕️ Find the right doctor for you\n💊 Get health advice & symptom guidance\n📋 Manage your appointments\n🔬 Lab tests & imaging services\n💉 Vaccinations & checkups\n💬 24/7 health support\n\nJust tell me what you need! 😊'
+      return 'Hey there! 👋 I\'m FastAI, your friendly AI health assistant!\n\nI can help you with:\n\n🏥 Book appointments with 100+ specialists\n👨⚕️ Find the right doctor for you\n💊 Get health advice & symptom guidance\n📋 Manage your appointments\n🔬 Lab tests & imaging services\n💉 Vaccinations & checkups\n💬 24/7 health support\n\nJust tell me what you need! 😊'
     }
   }
 
@@ -315,7 +381,7 @@ const PresAI = () => {
                 <div className='absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-white'></div>
               </div>
               <div className='flex-1'>
-                <h3 className='font-bold text-lg'>PresAI</h3>
+                <h3 className='font-bold text-lg'>FastAI</h3>
                 <p className='text-xs text-white/80'>AI Health Assistant • Online</p>
               </div>
             </div>

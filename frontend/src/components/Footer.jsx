@@ -49,7 +49,7 @@ export default function Footer() {
                     <span>📞</span> +91 8091043893
                 </li>
                 <li className='flex items-center gap-2 hover:text-[#5f6FFF] transition-colors duration-300'>
-                    <span>✉️</span> prescripto@gmail.com
+                    <span>✉️</span> fastdoc@gmail.com
                 </li>
                 <li className='flex items-center gap-2 hover:text-[#5f6FFF] transition-colors duration-300'>
                     <span>📍</span> Kangra, Himachal Pradesh
@@ -61,7 +61,7 @@ export default function Footer() {
 
       {/* copy right  */}
       <div className='border-t border-gray-200 pt-6'>
-            <p className='py-5 text-sm text-center text-gray-600'>Copyright 2025 © <span className='font-semibold text-[#5f6FFF]'>Prescripto</span> - All Rights Reserved.</p>
+            <p className='py-5 text-sm text-center text-gray-600'>Copyright 2025 © <span className='font-semibold text-[#5f6FFF]'>FastDoc</span> - All Rights Reserved.</p>
       </div>
     </div>
   )

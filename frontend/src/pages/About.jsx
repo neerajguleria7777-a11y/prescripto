@@ -15,12 +15,12 @@ const About = () => {
         <img className='w-full md:max-w-[400px] rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500' src={assets.about_image} alt="" />
         <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-700'>
           <div className='space-y-4'>
-            <p className='text-lg leading-relaxed'>Welcome to <span className='font-bold text-[#5f6FFF]'>Prescripto</span>, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.</p>
-            <p className='text-lg leading-relaxed'>Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, Prescripto is here to support you every step of the way.</p>
+            <p className='text-lg leading-relaxed'>Welcome to <span className='font-bold text-[#5f6FFF]'>FastDoc</span>, your trusted partner in managing your healthcare needs conveniently and efficiently. At FastDoc, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.</p>
+            <p className='text-lg leading-relaxed'>FastDoc is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, FastDoc is here to support you every step of the way.</p>
           </div>
           <div className='bg-gradient-to-r from-[#5f6FFF]/10 to-[#7a88ff]/10 p-6 rounded-xl border-l-4 border-[#5f6FFF]'>
             <h3 className='text-xl font-bold text-gray-800 mb-3'>Our Vision</h3>
-            <p className='text-gray-700 leading-relaxed'>Our vision at Prescripto is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.</p>
+            <p className='text-gray-700 leading-relaxed'>Our vision at FastDoc is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.</p>
           </div>
         </div>
       </div>
