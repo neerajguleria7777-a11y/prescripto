@@ -14,11 +14,12 @@ const Navbar = () => {
   const adminUrl = 'https://prescripto-2njz.vercel.app';
 
   return (
-    <div className='flex items-center justify-between text-sm py-3 mb-5 border-b border-b-gray-200 backdrop-blur-sm sticky top-0 bg-white/80 z-50 shadow-sm' >
-      <NavLink to={'/'} className='flex items-center gap-2'>
-        <img className='w-40 lg:w-48 cursor-pointer hover:scale-105 transition-transform duration-300' src={assets.logo} alt="" />
+    <div className='flex items-center justify-between px-4 sm:px-8 py-3 border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm' >
+      <NavLink to={'/'} className='flex items-center'>
+        <img className='h-20 sm:h-24 w-auto cursor-pointer hover:scale-105 transition-transform duration-300' src={assets.logo} alt="FastDoc" />
       </NavLink>
-      <ul className='hidden md:flex items-start gap-6 lg:gap-8 font-medium text-sm'>
+      
+      <ul className='hidden md:flex items-center gap-8 font-medium text-sm'>
         <NavLink className='relative group' to={'/'}>
           <li className='py-1 hover:text-[#5f6FFF] transition-colors duration-300' >HOME</li>
           <hr className='w-0 group-hover:w-full border-t-2 border-[#5f6FFF] m-auto transition-all duration-300 hidden' />
@@ -37,12 +38,12 @@ const Navbar = () => {
         </NavLink>
       </ul>
 
-      <div className='flex items-center gap-3'>
+      <div className='flex items-center gap-4'>
         <button 
           onClick={() => window.open(adminUrl, '_blank')} 
-          className='hidden md:block py-2 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm'
+          className='hidden md:flex items-center gap-2 py-2 px-5 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-all duration-300 text-sm'
         >
-          Admin
+          <span>👨‍💻</span> Admin
         </button>
         {
           user ?
@@ -66,8 +67,8 @@ const Navbar = () => {
             </>
             : 
             <>
-              <button onClick={() => navigate('/login')} className='hidden md:block py-2 px-6 bg-gradient-to-r from-[#5f6FFF] to-[#7a88ff] text-white rounded-full font-medium cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm'>Login</button>
-              <img onClick={() => setShowMenu(true)} src={assets.menu_icon} className='w-6 cursor-pointer md:hidden hover:scale-110 transition-transform duration-300' alt="" />
+              <button onClick={() => navigate('/login')} className='hidden md:block py-2 px-6 bg-[#5f6FFF] text-white rounded-lg font-medium hover:bg-[#4a5ae8] transition-all duration-300 text-sm'>Login</button>
+              <img onClick={() => setShowMenu(true)} src={assets.menu_icon} className='w-7 h-7 cursor-pointer md:hidden hover:scale-110 transition-transform duration-300' alt="menu" />
             </>
         }
 
